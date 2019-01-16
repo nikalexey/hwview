@@ -1,2 +1,2 @@
-# hwview
+# hxview
 console hex viewer
