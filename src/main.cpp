@@ -10,9 +10,11 @@ int main(int argc, char* argv[]) {
   CFile fl(argv[1]);
   uint8_t* data = fl.getData();
   size_t data_size = fl.getSize();
+  std::cout << "0x" << std::hex << std::setfill('0') << std::setw(8) << 0 << " | ";
   for (size_t i = 0; i < data_size; ++i) {
     if (i != 0 && i%16 == 0) {
       std::cout << "\n";
+      std::cout << "0x" << std::hex << std::setfill('0') << std::setw(8) << i << " | ";
     }
     std::cout << std::hex << std::setfill('0') << std::setw(2) << static_cast<int>(data[i]) << " ";
   }
